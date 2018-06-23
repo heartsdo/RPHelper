@@ -1,2 +1,4 @@
 .vscode
 cogs/__pycache__
+SQLRPHelper.db
+SQLRPHelper.db-journal
