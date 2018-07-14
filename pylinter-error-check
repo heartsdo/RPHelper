@@ -1,0 +1,29 @@
+python3.6 -m pylint bot.py 
+build=$?
+if [ $build == 2 ]; then
+	exit 1
+fi
+
+python3.6 -m pylint cogs/rp.py 
+build=$?
+if [ $build == 2 ]; then
+	exit 1
+fi
+
+python3.6 -m pylint cogs/rpprofile.py 
+build=$?
+if [ $build == 2 ]; then
+	exit 1
+fi
+
+python3.6 -m pylint cogs/botowner.py 
+build=$?
+if [ $build == 2 ]; then
+	exit 1
+fi
+
+python3.6 -m pylint cogs/rpadmin.py 
+build=$?
+if [ $build == 2 ]; then
+	exit 1
+fi

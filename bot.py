@@ -1,7 +1,8 @@
-import discord
-from discord.ext import commands
 import json
 import sys, traceback
+import discord
+from discord.ext import commands
+
 
 
 with open('./config.json', 'r') as fichier:
