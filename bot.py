@@ -3,8 +3,6 @@ import sys, traceback
 import discord
 from discord.ext import commands
 
-
-
 with open('./config.json', 'r') as fichier:
     config = json.load(fichier)
 
