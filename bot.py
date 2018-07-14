@@ -8,8 +8,7 @@ with open('./config.json', 'r') as fichier:
 
 token = config['token']
 
-# Below cogs represents our folder our cogs are in. Following is the file name. So 'meme.py' in cogs, would be cogs.meme
-# Think of it like a dot path import
+
 initial_extensions = ['cogs.rp',
                       'cogs.rpprofile',
                       'cogs.botowner']
