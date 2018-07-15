@@ -6,7 +6,6 @@ class RpProfileCog:
     def __init__(self, bot):
         self.bot = bot
 
-
     @commands.command()
     async def profile(self, ctx, member:discord.Member=None):
         conn = sqlite3.connect('SQLRPHelper.db')
