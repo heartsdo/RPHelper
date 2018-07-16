@@ -31,5 +31,4 @@ if __name__ == '__main__':
             print(f'Failed to load extension {extension}.', file=sys.stderr)
             traceback.print_exc()
 
-
 bot.run(token, bot=True, reconnect=True)
