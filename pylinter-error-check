@@ -27,3 +27,9 @@ build=$?
 if [ $build == 2 ]; then
 	exit 1
 fi
+
+python3.6 -m pylint cogs/rpclans.py 
+build=$?
+if [ $build == 2 ]; then
+	exit 1
+fi

@@ -11,7 +11,8 @@ token = config['token']
 
 initial_extensions = ['cogs.rp',
                       'cogs.rpprofile',
-                      'cogs.botowner']
+                      'cogs.botowner'
+                      'cogs.rpclans']
 
 bot = commands.Bot(command_prefix='rp.')
 
