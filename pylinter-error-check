@@ -1,34 +1,34 @@
-python3.6 -m pylint bot.py 
+python -m pylint bot.py 
 build=$?
 if [ $build == 2 ]; then
 	exit 1
 fi
 
-python3.6 -m pylint cogs/rp.py 
+python -m pylint cogs/rp.py 
 build=$?
 if [ $build == 2 ]; then
 	exit 1
 fi
 
-python3.6 -m pylint cogs/rpprofile.py 
+python -m pylint cogs/rpprofile.py 
 build=$?
 if [ $build == 2 ]; then
 	exit 1
 fi
 
-python3.6 -m pylint cogs/botowner.py 
+python -m pylint cogs/botowner.py 
 build=$?
 if [ $build == 2 ]; then
 	exit 1
 fi
 
-python3.6 -m pylint cogs/rpadmin.py 
+python -m pylint cogs/rpadmin.py 
 build=$?
 if [ $build == 2 ]; then
 	exit 1
 fi
 
-python3.6 -m pylint cogs/rpclans.py 
+python -m pylint cogs/rpclans.py 
 build=$?
 if [ $build == 2 ]; then
 	exit 1
