@@ -1,15 +1,15 @@
 image: python:3.7-stretch
 
 before_script:
-    - echo Python Version:
+    - echo "Python Version:"
     - python -V
-    - echo Installing Pylint
+    - echo "Installing Pylint"
     - pip install pylint
-    - echo Clone the repo of discord.py repo
+    - echo "Clone the repo of discord.py repo"
     - git clone https://github.com/Rapptz/discord.py.git
-    - echo Installing discord.py
+    - echo "Installing discord.py"
     - pip install discord.py/
-    - echo Done :)
+    - echo "Done :)"
     
 stages:
     - test
