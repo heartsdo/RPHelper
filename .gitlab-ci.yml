@@ -1,0 +1,21 @@
+image: python:3.7-stretch
+
+before_script:
+    - echo Python Version:
+    - python -V
+    - echo Installing Pylint
+    - pip install pylint
+    - echo Clone the repo of discord.py repo
+    - git clone https://github.com/Rapptz/discord.py.git
+    - echo Installing discord.py
+    - pip install discord.py/
+    - echo Done :)
+    
+stages:
+    - test
+
+
+lint:
+    stage: test
+    script:
+        - bash pylinter-error-check
