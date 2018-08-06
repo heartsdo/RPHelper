@@ -21,5 +21,5 @@ deploy:
     script:
         - mkdir /root/.ssh/
         - cp sshkey ~/.ssh/id_rsa.pub
-        - git remote add dokku dokku@videojexu4.ga:rphelper
+        - git remote add dokku dokku@videojeux4.ga:rphelper
         - git push dokku master
