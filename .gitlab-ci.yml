@@ -20,8 +20,7 @@ deploy:
     stage: deploy
     script:
         - mkdir /root/.ssh/
-        - cp privatekey ~/.ssh/id_rsa
+        - $PRIVATE_SSH > ~/.ssh/id_rsa
         - cp sshkey ~/.ssh/id_rsa.pub
-        - git remote remove dokku || exit 0
         - git remote add dokku dokku@videojeux4.ga:rphelper
         - git push dokku master
