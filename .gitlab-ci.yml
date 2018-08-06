@@ -8,9 +8,17 @@ before_script:
     
 stages:
     - test
+    - deploy
 
 
 lint:
     stage: test
     script:
         - bash pylinter-error-check
+
+deploy:
+    stage: deploy
+    script:
+        - cp sshkey ~/.ssh/id_rsa.pub
+        - git remote add dokku dokku@videojexu4.ga:rphelper
+        - git push dokku master
