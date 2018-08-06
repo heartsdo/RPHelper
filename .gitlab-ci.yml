@@ -19,11 +19,11 @@ lint:
 deploy:
     stage: deploy
     script:
-        - mkdir /root/.ssh/
-        - chmod 700 /root/.ssh
-        - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
-        - eval $(ssh-agent -s)
-        - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
+        - mkdir ~/.ssh/
+        - chmod 700 ~/.ssh
+        - echo "$PRIVATE_SSH" > ~/.ssh/id_rsa
+        - chmod 644 ~/.ssh/id_rsa
         - cp sshkey ~/.ssh/id_rsa.pub
+        - chmod 644 ~/.ssh/id_rsa.pub
         - git remote add dokku dokku@videojeux4.ga:rphelper
         - git push dokku master
